@@ -18,8 +18,7 @@ with DAG(
 
     pick_erp_system = BranchPythonOperator(
         task_id='pick_erp_system',
-        python_callable=pick_erp_system,
-        dag=dag,
+        python_callable=pick_erp_system
     )
 
     fetch_sales_new = EmptyOperator(task_id='fetch_sales_new')
