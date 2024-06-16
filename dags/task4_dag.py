@@ -14,7 +14,7 @@ with DAG(
     start_date=today(),
     schedule=None
 ) as dag:
-    start = EmptyOperator(task_id='start', dag=dag)
+    start = EmptyOperator(task_id='start')
 
     pick_erp_system = BranchPythonOperator(
         task_id='pick_erp_system',
