@@ -6,7 +6,7 @@ from airflow.models.baseoperator import chain_linear
 with DAG(
     dag_id='practice_task3',
     start_date=today(),
-    schedule='0 11-19/2 * * 1-5'
+    schedule=None
 ) as dag:
     task1 = EmptyOperator(task_id='task1')
     task2 = EmptyOperator(task_id='task2')
